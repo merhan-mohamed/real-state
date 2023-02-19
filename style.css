@@ -355,7 +355,7 @@ header ul .list .house
 
     color:white;
     background:
-    url(/assets/images/phone_in_talk_FILL0_wght100_GRAD0_opsz48.svg) 
+    url(assets/images/phone_in_talk_FILL0_wght100_GRAD0_opsz48.svg) 
     no-repeat;
     background-size: auto;
     background-position: 5px 10px;
@@ -367,25 +367,25 @@ header ul .list .house
 }
 .first-option
 {
-    background: url(/assets/images/in_home_mode_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/in_home_mode_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
     
 }
 .second-option
 {
-    background: url(/assets/images/share_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/share_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
    
 }
 .third-option
 {
-    background: url(/assets/images/print_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/print_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
    
 }
 .fourth-option
 {
-    background: url(/assets/images/forward_to_inbox_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/forward_to_inbox_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
    
 }
@@ -638,14 +638,14 @@ label
   .carousel-control-next-icon
   {
     
-    background: url(/assets/images/keyboard_arrow_right_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/keyboard_arrow_right_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
     background-position: -17px -14px;
   }
   .carousel-control-prev-icon
   {
    
-    background: url(/assets/images/keyboard_arrow_left_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/keyboard_arrow_left_FILL0_wght100_GRAD0_opsz48.svg)
     no-repeat;
     background-position: -14px -14px
   }
