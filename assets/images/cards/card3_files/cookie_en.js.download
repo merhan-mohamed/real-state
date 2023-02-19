@@ -1,0 +1,102 @@
+	var cc = initCookieConsent();
+cc.run({
+	current_lang: 'sk',
+	autoclear_cookies: true,
+	theme_css: '/static/css/cookieconsent.css',
+	cookie_name: 'cc_cookie',
+	cookie_expiration: 365,
+	page_scripts: true,
+	/*force_consent: true,*/
+	gui_options: {
+		consent_modal: {
+			layout: 'cloud',
+			position: 'bottom center',
+			transition: 'slide'
+		},
+		settings_modal: {
+			layout: 'box',
+			position: 'left',
+			transition: 'slide'
+		}
+	},
+	onAccept: function (cookie) {
+		document.getElementById('cookie_val') && (document.getElementById('cookie_val').innerHTML = JSON.stringify(cookie, null, 2));
+	},
+	onChange: function (cookie, changed_preferences) {
+		if (changed_preferences.indexOf('analytics') > -1) {
+			if (!cc.allowedCategory('analytics')) {
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag('consent', 'default', {
+					'ad_storage': 'denied',
+					'analytics_storage': 'denied'
+				});
+			}
+		}
+		document.getElementById('cookie_val') && (document.getElementById('cookie_val').innerHTML = JSON.stringify(cookie, null, 2));
+	},
+	languages: {
+		'sk': {
+			consent_modal: {
+				title: 'Before you continue to our website',
+				description: 'We use cookies and data to provide and operate services, measure traffic and website statistics. We use cookies and data according to your settings to display customized or general ads. Select the Customize button to display settings, including the option to decline cookie customization and browser-level control information that allows you to decline the use of some or all cookies for other purposes.',
+				primary_btn: {
+					text: 'I agree',
+					role: 'accept_all'
+				},
+				secondary_btn: {
+					text: 'Customize',
+					role: 'settings'
+				}
+			},
+			settings_modal: {
+				title: 'Personalization settings & cookies',
+				save_settings_btn: 'Agree with selected',
+				accept_all_btn: 'Agree with everything',
+				reject_all_btn: 'Refuse all',
+				close_btn_label: 'Close',
+				cookie_table_headers: [
+					{col1: 'Name'},
+					{col2: 'Domain'},
+					{col3: 'Expiration'}
+				],
+				blocks: [
+					{
+						title: 'Use of cookies',
+						description: 'We use cookies on our website to improve your user experience. You can agree to all or just some of these activities.'
+					}, {
+						title: 'Technical cookies',
+						description: 'These cookies ensure the proper functioning of our website. They also help us detect unauthorized login attempts and allow us to display content effectively.',
+						toggle: {
+							value: 'necessary',
+							enabled: true,
+							readonly: true
+						}
+					}, {
+						title: 'Content performance evaluation',
+						description: 'These cookies are used by us to find out anonymous data about our website traffic. They can talk about where you came from, about searches on our website, or how you navigate our site, so we can constantly improve it. The data obtained also allow us to process statistics.',
+						toggle: {
+							value: 'analytics',
+							enabled: false,
+							readonly: false
+						}
+					}, {
+						title: 'Personalized advertising',
+						description: 'We use these cookies in order to show you the most interesting advertising. They are also used to carry out similar marketing activities through third parties (through our advertising partners and social networks).',
+						toggle: {
+							value: 'targeting',
+							enabled: false,
+							readonly: false,
+							reload: 'on_disable'
+						}
+					}, {
+                        title: 'Learn more about providers',
+                        description: '<a href="https://policies.google.com/privacy" target="_blank">Google</a>, <a href="https://policies.google.com/privacy" target="_blank">YouTube</a>, <a href="https://www.facebook.com/policy.php" target="_blank">Meta Platforms, Inc.</a>, <a href="https://statcounter.com/about/legal/" target="_blank">statcounter</a>, <a href="https://sk.search.etargetnet.com/policy.html" target="_blank">Etarget</a>, <a href="https://www.livechatoo.com/en/live-chat-support-privacy-policy" target="_blank">Livechatoo</a>',
+                    }
+				]
+			}
+		}
+	}
+});
