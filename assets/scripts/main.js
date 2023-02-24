@@ -89,11 +89,6 @@ $(function () {
 });
 
 
-
-
-
-
-
 //lightgallery
 
 lightGallery(document.getElementById('lightgallery'));
@@ -109,6 +104,8 @@ stars.forEach((star, index1) => {
     });
   });
 });
+
+
 
 
 

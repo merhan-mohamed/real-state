@@ -140,9 +140,16 @@ header ul .list .house
 }
 
 
+
+
+
 /*******************nav media query***********************/
 .navbar-toggler {
     background-color: white;
+}
+.replaceWith
+{
+    display: none;
 }
 
 
@@ -210,6 +217,7 @@ header ul .list .house
 {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
 }
 .info-list
 {
@@ -223,6 +231,14 @@ header ul .list .house
 .img-rent
 {
     display: flex;
+}
+.more-img-rent
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.25rem
 }
 .rent-places h1
 {
@@ -273,7 +289,7 @@ header ul .list .house
 }
 .overlay-map
 {
-    right:25%;
+    right:13%;
     top:30%
 }
 .overlay-last
@@ -355,7 +371,7 @@ header ul .list .house
 
     color:white;
     background:
-    url(assets/images/phone_in_talk_FILL0_wght100_GRAD0_opsz48.svg) 
+    url(assets/images/whatsapp-inverse.svg) 
     no-repeat;
     background-size: auto;
     background-position: 5px 10px;
@@ -367,25 +383,25 @@ header ul .list .house
 }
 .first-option
 {
-    background: url(assets/images/in_home_mode_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/top-seller-favorite-green.svg)
     no-repeat;
     
 }
 .second-option
 {
-    background: url(assets/images/share_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/share-icon-green.svg)
     no-repeat;
    
 }
 .third-option
 {
-    background: url(assets/images/print_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/print.svg)
     no-repeat;
    
 }
 .fourth-option
 {
-    background: url(assets/images/forward_to_inbox_FILL0_wght100_GRAD0_opsz48.svg)
+    background: url(assets/images/top-seller-send-green.svg)
     no-repeat;
    
 }
@@ -451,6 +467,10 @@ header ul .list .house
     margin-bottom: 42px;
     width: 100%;
     
+}
+.right h4
+{
+    color: var(--color-main);
 }
   
 .detail-detailed-information__table th {
@@ -662,7 +682,6 @@ label
   {
     background-color: var(--color-main);
   }
-
   .carousel-control-next-icon,
   .carousel-control-prev-icon
   {
@@ -671,8 +690,6 @@ label
     line-height: 2px;
     margin-top: 14px;
   }
-
-
   .carousel-control-next,
   .carousel-control-prev
   {
@@ -681,9 +698,7 @@ label
     height: 10%;
     margin-top: 111px;
     opacity: 1;
-    
   }
-
   .carousel-control-next-icon
   {
     margin-left: 20px;
@@ -783,23 +798,85 @@ label
     align-items: start;
   }
 
+  /***********fixed Nav******************/
+  .detail-float-menu
+  {
+    display: none;
+  }
+
+  /***********burger Nav************************/
+  .navbar-collapse
+  {
+    flex-grow: 0;
+  }
+  .negibour-li
+  {
+      display:none
+  }
   /************************media query**********************/
+  @media screen and (max-width: 400px){
+   .card
+   {
+    width:18rem !important
+   }
+   .small-screen-house
+   {
+    display: none;
+   }
+  }
   @media screen and (max-width: 600px){
-    .SubList
+    .replaceWith
     {
-        display: block;
-        list-style: none;
+        display:flex
+    }
+    .replace
+    {
+        display: none;
+    }
+
+    #uncomplete-number
+    {
+        display: none;
+    }
+    .navbar-toggler {
+        background-color: #00204e;
+        border: none;
+    }
+    .navbar-toggler-icon
+    {
+        background-image: url(assets/images/menu-burger.svg);
+    }
+    .rent-places h1
+    {
+        font-size: 24px;
+        margin-left: -75px;
+    }
+    .hide-breadcrumb
+    {
+        display: none;
+    }
+ 
+    .card
+    {
+       
+        margin: auto;
     }
     .header
     {
-        height: 285px;
+       
         margin-left: -32px;
     }
     header ul .list .house {
-        width: 6%;
+        width: 46%;
+        margin-left: 10px
+    }
+    .listFor-small
+    {
+        margin: 0px;
+        padding-left: 63px;
     }
     .sub {
-        top: 110px;
+       
         margin-left: -8px;
     }
     .navbar-nav .dropdown-menu {
@@ -818,16 +895,29 @@ label
     {
         display: block;
     }
-    .eye-show p{
-        font-size: 8px;
-    }
-    .rent-places h1
+    .eye
     {
-        margin-left: -56px;
+        display:block !important;
+    }
+    .eye-show
+    {
+        display: none !important;
+    }
+    .work {
+        margin-top: 0px;
     }
     .info-list
     {
-        display: block;
+        display: flex;
+        align-items: start;
+    }
+    .info-list ul 
+    {
+        margin-left:-85px
+    }
+    .info-list ul li 
+    {
+       font-size: 12px !important;
     }
     .secnd-ul
     {
@@ -835,20 +925,38 @@ label
     }
     .overlay-last h4 {
         
-        margin-top: 6rem !important;
+        margin-top: 3rem !important;
     }
     .navbar-expand-lg .navbar-nav {
         margin-left: 10%;
         DISPLAY: BLOCK;
         margin-top: 25px;
     }
-
-    .title p,
-    .subtitle,
+    .options
+    {
+        display: none !important;
+    }
+    .title p
+    {
+        font-size: 17px;
+    }
+    .subtitle
+    {
+        font-size: 40px;
+        font-weight: bold;
+    }
     .whatsapp a,
     .viber a
     {
-        font-size: 9px;
+        font-size: 15px;
+    }
+    tbody, td, tfoot, th, thead, tr
+    {
+    font-size: 15px;
+    }
+    .detail-detailed-information__table
+    {
+    margin-bottom: 0px;
     }
 
     .viber a
@@ -858,16 +966,12 @@ label
     .whatsapp,
     .viber
     {
-        background-size: 18px;
+        background-size: 35px;
         background-position: 9px 14px;
-    }
-    #calling
-    {
-        font-size: 10px;
     }
     .press
     {
-        margin-left: -141px !important;
+        margin-left:0px !important;
     }
     .first-option, .second-option, .third-option, .fourth-option {
 
@@ -896,14 +1000,35 @@ label
     }
     .sec-half p
     {
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .cookies_settings
+    {
+        font-size: 12px;
     }
     .headline-logo {
-        width: 19% !important;
+        width: 22% !important;
+       
+    }
+    .contact-form h4,
+    .right h4 {
+        font-size: 18px;
+    }
+    .more-img-rent
+    {
+        flex-direction: row !important;
+        align-items: unset;
+        justify-content: unset;
+        margin-left: 0px 
+    }
+    #Gallery, .last, .overlay-img {
+         width: 100%;
+         height: inherit;
     }
     .header nav
     {
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .more-img-rent {
         padding-bottom: 45px !important;
@@ -920,114 +1045,107 @@ label
     {
         margin-right: 40px;
     }
+    .more-img-rent img {
+        height: 115% !important;
+    }
+    .SubList li {
+        
+        margin: 0px 7px !important;
+    }
+    .SubList li a {
+        font-size: 10px;
+    }
+    .list-unstyled {
+        padding-left: 20px;
+    }
+    .word-small-screen
+    {
+        display: none;
+    }
+    .header-logo
+    {
+        width: 157px !important;
+        margin-left: 25px;
+    }
   
 
   }
   @media (max-width:768px) {
+  
+    .headline-logo {
+        width: 20%;
+        padding: 10px;
+    }
+    #uncomplete-number
+    {
+        display: none;
+    }
+    .navbar-toggler {
+        background-color: #00204e;
+        border: none;
+    }
+
+    .navbar-toggler-icon
+    {
+        background-image: url(assets/images/menu-burger.svg);
+    }
+    .rent-places h1
+    {
+        font-size: 24px;
+        margin-left: -75px;
+    }
+    
+    .rent
+    {
+        padding-right:10px;
+    }
+    .info
+    {
+        display: block;
+    }
     .rent-places
     {
         display: block;
     }
-    .img-rent
+    .info-list
     {
-    display: block;
-    position: relative;
+        display: flex;
+        align-items: start;
     }
-    .img-rent #lightgallery a img
+    .info-list ul 
     {
-        margin-bottom: 20px;
+        margin-left:-85px
     }
-    .overlay-last
+    .info-list ul li 
     {
-        font-size: 25px;
-      
+       font-size: 17px;
     }
-    .overlay-last h4
-    {
-        font-size: 25px;
-        margin-top: 16rem
+    .more-img-rent img {
+        height: 115%;
+    }
+    .more-img-rent {
+        padding-bottom: 45px !important;
     }
     .more-img-rent
     {
-        padding-bottom: 20px;
-    }
-    .more-img-rent img {
-        width: 90%;
-        margin: auto;
-        display: block;
-    }
-    .img-rent #lightgallery a img {
-        margin-bottom: 10px;
-        width: 85.5%;
-        display: block;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-    .last, .overlay-img, #Gallery {
-        height: 33%;
-        width: 95%;
-        display: block;
-        margin-bottom: 10px;
-    }
-    .overlay-map {
-        right: 41%;
-        top: 37%;
-        width: 20%;
-    }
-    .overlay-last
-    {
-        width: 90%;
-        margin: auto;
-    }
-   
-    .eye-show {
-        margin-top: -28px;
-    }
-    .eye-show p
-    {
-        font-size: 11px;
-    }
-    #calling
-    {
-        width: 35%;
-        margin-right: 0px;
-    }
-    #press 
-    {
-        margin-left: 140px;
-    }
-    .stic
-  {
-    width: 10%;
-  }
-  .carousel-control-next-icon
-   {
-    margin-left: 11px;
-}
-.carousel-control-prev-icon {
-    margin-right: -10px;
-}
-.sec-half p
-{
-    font-size: 12px;
-}
-}
-  @media (min-width:768px) and (max-width:992px) {
-    .headline-logo {
-        width: 13%;
-    }
-    .rent-places
-    {
-        display: block;
+        flex-direction: row !important;
+        align-items: unset;
+        justify-content: unset;
+        margin-left: 0px 
     }
     .img-rent
     {
     display: block;
     position: relative;
     }
+    #Gallery, .last, .overlay-img {
+        width: 100%;
+        height: inherit;
+   }
     .img-rent #lightgallery a img
     {
-        margin-bottom: 20px;
+       
+        width: 100%;
     }
     .overlay-last
     {
@@ -1039,114 +1157,698 @@ label
         font-size: 25px;
         margin-top: 7rem
     }
-    .more-img-rent
+    .eye
     {
-        padding-bottom: 20px;
+        display:block !important;
     }
-    .more-img-rent img {
-        width: 90%;
-        margin: auto;
-        display: block;
+    .eye-show
+    {
+        display: none !important;
     }
-    .img-rent #lightgallery a img {
-        margin-bottom: 10px;
-        width: 85.5%;
-        display: block;
-        margin: auto;
-        margin-bottom: 10px;
+    .work {
+        margin-top: 0px;
     }
-    .last, .overlay-img, #Gallery {
-        height: 33%;
-        width: 95%;
-        display: block;
-        margin-bottom: 10px;
+    .title p
+    {
+        font-size: 17px;
     }
-    .overlay-map {
-        right: 41%;
-        top: 37%;
-        width: 20%;
+    .subtitle
+    {
+        font-size: 40px;
+        font-weight: bold;
     }
     .overlay-last
     {
-        width: 90%;
+        width: 100%;
         margin: auto;
+        height: 115%;
+        margin-top: 0px;
+        font-size: 15px;
+    }
+    .overlay-map {
+        right: 35%;
+        top: 45%;
+        width: 32%;
     }
     .eye-show {
-        margin-top: -49px;
-        right: 10px;
-        margin-right: -50px;
+        margin-top: -28px;
     }
     .eye-show p
     {
-        font-size: 7px;
+        font-size: 11px;
+    }
+    #calling {
+        margin: auto;
+        width: 88%;
+        float: unset;
+        margin-top: 0px;
+       margin-right: 20px;
+    }
+    .stic
+    {
+        position: unset;
+    }
+    .stic
+    {
+    width: 10%;
+    }
+    .first-number p
+    {
+        font-size: 20px;
+    }
+    .first-number h5
+    {
+        font-size: 18px;
+    }
+    .second-image {
+        width: 25%;
+    }
+    .card-body-div {
+        display: block !important;
+    }
+    .price
+    {
+        display: flex;
+        align-items: baseline !important;
+    }
+  .carousel-control-next-icon
+   {
+    margin-left:6px;
+    }
+   
+    .carousel-control-next
+     {
+        margin-right: -20px !important;
+    }
+    .carousel-control-prev {
+        margin-left: -20px;
+    }
+    .sec-half p
+    {
+        font-size: 12px;
+    }
+    .floating-labels 
+    {
+        width: 100%;
+    }
+    [type=submit]
+    {
+        display: block;
+        margin: auto;
+    }
+    .products h4
+    {
+        font-size: 17px;
+    }
+    .footer-details
+    {
+        display: block !important;
+        text-align: center;
+    }
+    .first-img img 
+    {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .beneath 
+    {
+        display: none !important;
+    }
+    .b-img {
+        width: 90%
+    }
+    .options
+    {
+        display: none !important;
+    }
+    .whatsapp,
+    .viber
+    {
+        background-size: 35px;
+        background-position: 9px 14px;
+    }
+    .contact-form h4,
+    .right h4 {
+         font-size: 18px;
+    }
+    .detail-detailed-information__table
+    {
+         margin-bottom: 0px;
+    }
+    .Listing .press {
+         margin-left: 0px;
+    }
+        .cookies_settings
+    {
+        font-size: 12px;
+    }
+    .small-screen
+    {
+        margin-top: -8px;
+    }
+    /*********Burger Nav*******/
+    .navbar-collapse {
+        align-items: center;
+        background: var(--color-main);
+        margin-left: 30px;
+        color:white;
+        border:1px solid aqua;
+        z-index: 20;
+    }
+    .navbar-nav
+    {
+        display: none !important;
+    }
+    .negibour-li
+    {
+        display:block
+    }
+    .navbar-toggler:focus
+    {
+        border:2px solid aqua
+    }
+    .list-il li:hover a
+    {
+        
+        color:aqua
+    }
+    .myflag li:hover a
+    {
+        border: 2px solid aqua;
+        background-color: white;
+    }
+  
+   
+    }
+    @media (min-width:768px) and (max-width:992px) {
+        #uncomplete-number
+        {
+            display: none;
+        }
+        .navbar-toggler {
+            background-color: #00204e;
+            border: none;
+        }
+        .navbar-toggler-icon
+        {
+            background-image: url(assets/images/menu-burger.svg);
+        }
+        .rent-places h1
+        {
+            font-size: 24px;
+            margin-left: -75px;
+        }
+        .SubList
+        {
+            list-style: none;
+        }
+        .rent
+        {
+            padding-right:10px;
+        }
+        .info
+        {
+            display: block;
+        }
+        .rent-places
+        {
+            display: block;
+        }
+        .info-list
+        {
+            display: flex;
+            align-items: start;
+        }
+        .info-list ul 
+        {
+            margin-left:-85px
+        }
+        .info-list ul li 
+        {
+           font-size: 17px;
+        }
+        .more-img-rent img {
+            height: 115%;
+        }
+        .more-img-rent {
+            padding-bottom: 45px !important;
+        }
+        .more-img-rent
+        {
+            flex-direction: row !important;
+            align-items: unset;
+            justify-content: unset;
+            margin-left: 0px 
+        }
+        .img-rent
+        {
+        display: block;
+        position: relative;
+        }
+        #Gallery, .last, .overlay-img {
+            width: 100%;
+            height: inherit;
+       }
+        .img-rent #lightgallery a img
+        {
+           
+            width: 100%;
+        }
+        .overlay-last
+        {
+            font-size: 25px;
+          
+        }
+        .overlay-last h4
+        {
+            font-size: 25px;
+            margin-top: 16rem
+        }
+        .eye
+        {
+            display:block !important;
+            margin-top: -10px;
+        }
+        .eye-show
+        {
+            display: none !important;
+        }
+        .work {
+            margin-top: 0px;
+            margin: auto;
+        }
+        .title p
+        {
+            font-size: 17px;
+        }
+        .subtitle
+        {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .overlay-last
+        {
+            width: 100%;
+            margin: auto;
+            height: 115%;
+            margin-top: 0px;
+        }
+       
+        .eye-show {
+            margin-top: -28px;
+        }
+        .eye-show p
+        {
+            font-size: 11px;
+        }
+        .headline-logo {
+            width: 13%;
+        }
+        .rent-places
+        {
+            display: block;
+        }
+        .img-rent
+        {
+        display: block;
+        position: relative;
+        }
+        .img-rent #lightgallery a img
+        {
+            margin-bottom: 20px;
+            
+        }
+
+        .overlay-last h4
+        {
+            font-size: 25px;
+            margin-top: 7rem
+        }
+        .more-img-rent
+        {
+            padding-bottom: 20px;
+        }
+    
+        .img-rent #lightgallery a img {
+            margin-bottom: 10px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            
+        }
+        .last, .overlay-img, #Gallery {
+        
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .overlay-map {
+            right: 37%;
+            top: 52%;
+            width: 25%;
+        }
+        .overlay-last
+        {
+            width: 100%;
+            margin: auto;
+            margin-top: -1px;
+        }
+        .eye-show {
+            margin-top: -49px;
+            right: 10px;
+            margin-right: -50px;
+        }
+        .eye-show p
+        {
+            font-size: 7px;
+        }
+    
+    .carousel-control-next-icon
+    {
+        margin-left: 11px;
+    }
+    .carousel-control-prev-icon {
+        margin-right: -10px;
+    }
+    .sec-half p
+    {
+        font-size: 12px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        margin-top: 75px;
+    }
+    .navbar-nav .dropdown-menu {
+        margin-left: 0px;
+    }
+    .menu-list {
+        border-radius: 0;
+        position: unset;
+        display: block;
+    }
+    header ul .list .house {
+        width:25%;
+    }
+    .sub {
+        margin-left: -8px;
+    }
+    .header
+    {
+       
+        margin-left: -32px;
+    }
+ 
+        .navbar-expand-lg .navbar-nav {
+            margin-left: 10%;
+            DISPLAY: BLOCK;
+            margin-top: 25px;
+        }
+        #calling {
+            margin: auto;
+            width: 95%;
+            float: unset;
+            margin-top: 0px;
+           margin-right: 25px;
+        }
+        .stic
+        {
+            position: unset;
+        }
+        .stic
+        {
+        width: 10%;
+        }
+        .first-number p
+        {
+            font-size: 20px;
+        }
+        .first-number h5
+        {
+            font-size: 18px;
+        }
+        .second-image {
+            width: 25%;
+        }
+        .options
+        {
+            display: none !important;
+        }
+        .whatsapp,
+    .viber
+    {
+        background-size: 35px;
+        background-position: 9px 14px;
+    }
+    .contact-form h4,
+    .right h4 {
+         font-size: 18px;
+    }
+    .detail-detailed-information__table
+    {
+         margin-bottom: 0px;
+    }
+    .Listing .press {
+         margin-left: 0px;
+    }
+        .cookies_settings
+    {
+        font-size: 12px;
+    }
+    .floating-labels
+    {
+        width: 100%;
+    }
+
+    }
+    @media (max-width:993px) {
+        .detail-float-menu
+        {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .detail-float-menu__item 
+        {
+            flex: 1 0 auto;
+        }
+        .detail-float-menu__item--share
+        {
+            flex: 0 0 45px;
+        }
+    }
+
+    @media (min-width:1000px) {
+        
+        .navbar-expand-lg .navbar-nav {
+            margin-left: 0px !important;
+        }
+        .listFor-small
+        {
+            margin-left: 32% !important;
+            margin-top:10px
+        }
+        
+    }
+    @media (min-width:992px) and (max-width:1200px) {
+    .rent
+    {
+        padding-right:43px;
+    }
+    .SubList
+    {
+        list-style: none;
+         margin-left: -53px;
+    }
+    .rent-places
+    {
+        display: block;
+    }
+    .info-list
+    {
+        display: flex;
+        align-items: start;
+    }
+    .info-list ul 
+    {
+        margin-left:-18px
+    }
+    .info-list ul li 
+    {
+       font-size: 12px;
+    }
+    .more-img-rent img {
+        height: 115%;
+    }
+    .more-img-rent {
+        padding-bottom: 45px !important;
+    }
+    .more-img-rent
+    {
+        flex-direction: row !important;
+        align-items: unset;
+        justify-content: unset;
+        margin-left: 0px 
+    }
+    .img-rent
+    {
+    display: block;
+    position: relative;
+    }
+    #Gallery, .last, .overlay-img {
+        width: 28.5%;
+        height: inherit;
+   }
+    .img-rent #lightgallery a img
+    {
+       
+        width: 85.5%;
+        margin-bottom:10px
+    }
+    .overlay-last
+    {
+        font-size: 25px;
+        height: 115%;
+      
+    }
+    .overlay-last h4
+    {
+        font-size: 25px;
+        margin-top: 7rem
+    }
+    .overlay-map {
+        right: 30%;
+        top: 38%;
+    }
+    .work{
+        margin-top: -58px;
+        width: 27%;
+        margin-left: 49px
+    }
+    .eye
+    {
+        align-items: flex-start !important;
+    }
+    .eye-show p {
+        font-size: 12px;
     }
     #calling
     {
-        width: 35%;
-        margin-right: 0px;
+        margin-right: 138px;
+        
     }
-    .title,
-    .subtitle
-    {
-        font-size: 13px !important;
-    }
-    #press 
-    {
-        margin-left: 75px;
-    }
-    .stic
-  {
-    width: 10%;
-  }
-  .carousel-control-next-icon
-   {
-    margin-left: 11px;
-}
-.carousel-control-prev-icon {
-    margin-right: -10px;
-}
-.sec-half p
-{
-    font-size: 12px;
-}
-.carousel-control-next, .carousel-control-prev {
-    margin-top: 75px;
-}
-.navbar-nav .dropdown-menu {
-    margin-left: 0px;
-}
-.menu-list {
-    border-radius: 0;
-    position: unset;
-    display: block;
-}
-header ul .list .house {
-    width: 6%;
-}
-.sub {
-    top: 110px;
-    margin-left: -8px;
-}
-.header
-{
-    height: 285px;
-    margin-left: -32px;
-}
-.SubList
-    {
-        display: block;
-        list-style: none;
+    .Listing .press {
+        margin-left: 0px;
     }
     .navbar-expand-lg .navbar-nav {
-        margin-left: 10%;
-        DISPLAY: BLOCK;
-        margin-top: 25px;
+        flex-direction: row;
+        margin-left: 44%;
     }
+
+
+
+
+
+
+    }
+@media (min-width:1200px) and (max-width:1600px) {
+    .Listing .press {
+        margin-left: 0px;
+    }
+    
+}
+@media (min-width:1600px) 
+{
+    .rent
+    {
+        padding-left: 585px;
+        padding-top: 20px;
+        padding-right: 10px;
+        font-size: 17px;
+    }
+    .rent h1
+    {
+        font-size: 26px;
+    }
+    #lightgallery img
+    {
+        height: 100%;
+        width:101%
+    }
+    .more-img-rent img
+    {
+        width: 29.5%;
+        height: 54%;
+      
+    }
+    .img-rent {
+        display: flex;
+        align-items: flex-start;
+    }
+    .last, .overlay-img, #Gallery {
+        height: 33%;
+        width: 100%;
+    }
+    .overlay-map {
+        right: 51%;
+        top: 25%;
+        width: 40%;
+    }
+    .overlay-last
+    {
+        width: 30%;
+    }
+    .work {
+        margin-top: -85px;
+        margin-right: -44%;
+        width: 17%;
+    }
+    .press
+    {
+        width: 81%;
+    }
+    .Listing .press {
+        margin-left: 100px;
+    }
+
 }
 
 
-
-
-
-
-  
+/************fixed Nav in media query*******************/
+.detail-float-menu {
+    z-index: 999;
+}
+.detail-float-menu {
+    bottom: 0;
+    height: 45px;
+    left: 0;
+    position: fixed;
+    right: 0;
+}
+.detail-float-menu__item--phone {
+    background-image: url(./assets/images/phone-white.svg);
+}
+.detail-float-menu__item {
+    background-color: rgba(0,32,78,0.9);
+    background-position: 15px 50%;
+    background-repeat: no-repeat;
+    color: #fff!important;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45px;
+    line-height: 20px;
+    padding: 12px 0 0 46px;
+    text-decoration: none;
+}
+.detail-float-menu__item--email {
+    background-image: url(./assets/images/top-seller-send-inverse.svg);
+    background-size: 24px auto;
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+.detail-float-menu__item--share {
+    background-image: url(./assets/images/share-icon-white.svg);
+    background-position: 50% 50%;
+    background-size: 20px auto;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding-left: 0;
+    position: relative;
+    width: 45px;
+    cursor: pointer;
+}
