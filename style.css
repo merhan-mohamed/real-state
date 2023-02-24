@@ -1378,6 +1378,7 @@ label
         {
             display: flex;
             align-items: start;
+            margin-left: -46px;
         }
         .info-list ul 
         {
@@ -1672,7 +1673,7 @@ label
     }
     .info-list ul li 
     {
-       font-size: 12px;
+       font-size: 11px;
     }
     .more-img-rent img {
         height: 115%;
