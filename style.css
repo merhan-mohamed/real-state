@@ -1823,7 +1823,7 @@ label
     right: 0;
 }
 .detail-float-menu__item--phone {
-    background-image: url(./assets/images/phone-white.svg);
+    background-image: url(assets/images/phone-white.svg);
 }
 .detail-float-menu__item {
     background-color: rgba(0,32,78,0.9);
@@ -1838,12 +1838,12 @@ label
     text-decoration: none;
 }
 .detail-float-menu__item--email {
-    background-image: url(./assets/images/top-seller-send-inverse.svg);
+    background-image: url(assets/images/top-seller-send-inverse.svg);
     background-size: 24px auto;
     border-left: 1px solid rgba(255,255,255,0.5);
 }
 .detail-float-menu__item--share {
-    background-image: url(./assets/images/share-icon-white.svg);
+    background-image: url(assets/images/share-icon-white.svg);
     background-position: 50% 50%;
     background-size: 20px auto;
     border-left: 1px solid rgba(255,255,255,0.5);
