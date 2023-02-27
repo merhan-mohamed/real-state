@@ -326,7 +326,7 @@ header ul .list .house
 {
     background: var(--baby-blue);
     color:#fff;
-    font-size: 38px;
+    font-size: 36px;
     padding: 7px 0;
     text-align: center;   
 }
@@ -1974,34 +1974,29 @@ background-color: white;
         top: 25%;
         width: 40%;
     }
-   
-  
-  
-
 }
 
-@media (min-width:2560px) {
-    .work {
-        margin-left: 636px;
-        width: 12%;
-    }
-    .eye
-    {
+@media (min-width:2000px)  {
+   .eye{
         align-items: unset !important;
         justify-content: unset !important;
-    }
-    .eye-show {
-        padding-left: 21px;
-    }
-    .map-link
-    {
-        margin-left: 43px;
-    }
-    .c-centre
-    {
-        width: 96%;
-    }
+   }
+   .eye-show
+   {
+    margin-left: 16px !important;
+   }
+   .work
+   {
+    width:24%
+   }
+   .map-link
+   {
+    margin-left: 37px;
+   }
+    
 }
+
+
 
 
 
