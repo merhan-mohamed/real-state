@@ -1320,9 +1320,9 @@ label
     {
         display:block
     }
-    .navbar-toggler:focus
+    .navbar-toggler
     {
-        border:2px solid aqua
+        color: aqua;
     }
     .list-il li:hover a
     {
