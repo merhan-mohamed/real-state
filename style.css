@@ -830,6 +830,7 @@ label
   @media screen and (max-width: 600px){
     .small-screen ul {
         margin-top: 1.5rem;
+        padding-left: 20px;
     }
     .replaceWith
     {
@@ -1057,9 +1058,7 @@ label
     .SubList li a {
         font-size: 10px;
     }
-    .list-unstyled {
-        padding-left: 20px;
-    }
+
     .word-small-screen
     {
         display: none;
@@ -1997,6 +1996,10 @@ background-color: white;
     .map-link
     {
         margin-left: 43px;
+    }
+    .c-centre
+    {
+        width: 96%;
     }
 }
 
