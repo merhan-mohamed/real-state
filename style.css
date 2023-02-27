@@ -58,6 +58,10 @@ header ul .list .house
     width: 20%;
     margin-left: 10px;
 }
+.small-screen ul
+    {
+        margin-top:0.5rem;
+    }
 .btn-secondary 
 {
     --bs-btn-bg: #fffff;
@@ -206,10 +210,13 @@ header ul .list .house
 {
     background-color: #f2f4f6;
 }
+.rent-places
+{
+    background-color:#f2f4f6 ;
+}
 .rent
 {
     color: var(--color-main);
-    padding-left: 95px;
     padding-top: 20px;
     padding-right: 10px;
 }
@@ -507,10 +514,7 @@ padding: 8px 10px;
 {
     display: none;
 }
-.Listing .press
-{
-    margin-left:195px
-}
+
 /***********Contact Form******************/
 .contact-form h4
 {
@@ -562,7 +566,6 @@ padding: 8px 10px;
 label
 {
     margin-top: 15px;
-    margin-left: 10px;
     font-weight: bold;
 }
 .floating-labels
@@ -825,6 +828,9 @@ label
    }
   }
   @media screen and (max-width: 600px){
+    .small-screen ul {
+        margin-top: 1.5rem;
+    }
     .replaceWith
     {
         display:flex
@@ -849,7 +855,6 @@ label
     .rent-places h1
     {
         font-size: 24px;
-        margin-left: -75px;
     }
     .hide-breadcrumb
     {
@@ -911,13 +916,10 @@ label
         display: flex;
         align-items: start;
     }
-    .info-list ul 
-    {
-        margin-left:-85px
-    }
+ 
     .info-list ul li 
     {
-       font-size: 12px !important;
+       font-size: 11px !important;
     }
     .secnd-ul
     {
@@ -1092,7 +1094,7 @@ label
     .rent-places h1
     {
         font-size: 24px;
-        margin-left: -75px;
+       
     }
     
     .rent
@@ -1111,10 +1113,6 @@ label
     {
         display: flex;
         align-items: start;
-    }
-    .info-list ul 
-    {
-        margin-left:-115px
     }
     .info-list ul li 
     {
@@ -1302,7 +1300,7 @@ label
     {
         font-size: 12px;
     }
-    .small-screen
+    .small-screen 
     {
         margin-top: -8px;
     }
@@ -1339,8 +1337,48 @@ label
     }
   
    
+  }
+  @media (min-width:768px) and (max-width:991px){
+            /*********Burger Nav*******/
+    .navbar-collapse {
+        align-items: center;
+        background: var(--color-main);
+        margin-left: 30px;
+        color:white;
+        border:1px solid aqua;
+        z-index: 20;
     }
-    @media (min-width:768px) and (max-width:992px) {
+    .navbar-nav
+    {
+        display: none !important;
+    }
+    .negibour-li
+    {
+        display:block
+    }
+    .navbar-toggler:focus
+    {
+        border:2px solid aqua
+    }
+    .list-il li:hover a
+    {
+        
+        color:aqua
+    }
+    .myflag li:hover a
+    {
+        border: 2px solid aqua;
+        background-color: white;
+    }
+        
+  }
+  @media (min-width:768px) {
+        .small-screen ul {
+
+            margin-left: -10px;
+        } 
+   }
+  @media (min-width:768px) and (max-width:992px) {
         #uncomplete-number
         {
             display: none;
@@ -1356,7 +1394,7 @@ label
         .rent-places h1
         {
             font-size: 24px;
-            margin-left: -75px;
+           
         }
         .SubList
         {
@@ -1378,12 +1416,9 @@ label
         {
             display: flex;
             align-items: start;
-            margin-left: -46px;
+            
         }
-        .info-list ul 
-        {
-            margin-left:-33px
-        }
+      
         .info-list ul li 
         {
            font-size: 17px;
@@ -1539,8 +1574,11 @@ label
         margin-top: 75px;
     }
     .navbar-nav .dropdown-menu {
-        margin-left: 0px;
+        margin-left: 75%;
     }
+   .flags-ul{
+    margin-left:92% !important
+   }
     .menu-list {
         border-radius: 0;
         position: unset;
@@ -1618,6 +1656,46 @@ label
     {
         width: 100%;
     }
+    .small-screen ul
+    {
+        margin-top: -1px ;
+    }
+    
+   
+   }
+    @media (min-width:991px )and (max-width:991.5px) {
+  
+        /*********Burger Nav*******/
+.navbar-collapse {
+align-items: center;
+background: var(--color-main);
+margin-left: 30px;
+color:white;
+border:1px solid aqua;
+z-index: 20;
+}
+.navbar-nav
+{
+display: none !important;
+}
+.negibour-li
+{
+display:block
+}
+.navbar-toggler:focus
+{
+border:2px solid aqua
+}
+.list-il li:hover a
+{
+
+color:aqua
+}
+.myflag li:hover a
+{
+border: 2px solid aqua;
+background-color: white;
+}
 
     }
     @media (max-width:993px) {
@@ -1635,7 +1713,75 @@ label
             flex: 0 0 45px;
         }
     }
+    @media (min-width:993px)  and (max-width:1000px){
+        .navbar-expand-lg .navbar-collapse {
+            margin-right: 50px !important; 
+        }
+        .work{
+            margin-left: 0px !important;
+        }
+     
+        .img-rent #lightgallery a img {
+            width: 98.5% !important;
+        }
+        #Gallery, .last, .overlay-img {
+            width: 32.8% !important;
+        }
+        .whatsapp a, .viber a
+        {
+            font-size: 11px;
+        }
+    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    }
     @media (min-width:1000px) {
         
         .navbar-expand-lg .navbar-nav {
@@ -1643,8 +1789,14 @@ label
         }
         .listFor-small
         {
-            margin-left: 32% !important;
             margin-top:10px
+        }
+        
+    }
+    @media (min-width:1000px) and (max-width:1000px) {
+        .rent
+        {
+            margin-left: 0px !important;
         }
         
     }
@@ -1694,13 +1846,13 @@ label
     position: relative;
     }
     #Gallery, .last, .overlay-img {
-        width: 28.5%;
+        width: 33.5%;
         height: inherit;
    }
     .img-rent #lightgallery a img
     {
        
-        width: 85.5%;
+        width: 100%;
         margin-bottom:10px
     }
     .overlay-last
@@ -1721,7 +1873,6 @@ label
     .work{
         margin-top: -58px;
         width: 27%;
-        margin-left: 49px
     }
     .eye
     {
@@ -1732,7 +1883,7 @@ label
     }
     #calling
     {
-        margin-right: 138px;
+        margin-right: 100px;
         
     }
     .Listing .press {
@@ -1749,67 +1900,106 @@ label
 
 
     }
-@media (min-width:1200px) and (max-width:1600px) {
-    .Listing .press {
-        margin-left: 0px;
+    @media (min-width:992px) and (max-width:992.5px) {
+        .headline-logo {
+            width: 11%;
+        }
+        .navbar-expand-lg .navbar-nav 
+        {
+            margin-left: 0px;
+        }
+        .navbar-expand-lg .navbar-nav
+        {
+            display: flex;
+        }
+        #Gallery, .last, .overlay-img {
+            width: 30.8%;
+           
+        }
+        .more-img-rent
+        {
+            margin-left:71px
+        }
+        .work
+        {
+            margin-left:345px
+        }
+        .subtitle {
+            font-size: 32px;
+        }
+        #calling
+        {
+            margin-left:20px
+        }
+        
+    }
+    @media (min-width:2000px) and (max-width:2040px) {
+      
+        .info-list
+        {
+            font-size: 16px;
+            margin-left: -15px;
+        }
+        
+    }
+@media (min-width:995px) and (max-width:2000px) {
+    .home
+    {
+        margin-left: -55% !important;
     }
     
 }
+
+
+
 @media (min-width:1600px) 
 {
     .rent
     {
-        padding-left: 585px;
+        
         padding-top: 20px;
-        padding-right: 10px;
         font-size: 17px;
     }
     .rent h1
     {
         font-size: 26px;
     }
-    #lightgallery img
-    {
-        height: 100%;
-        width:101%
-    }
-    .more-img-rent img
-    {
-        width: 29.5%;
-        height: 54%;
-      
-    }
+  
     .img-rent {
         display: flex;
-        align-items: flex-start;
+       
     }
-    .last, .overlay-img, #Gallery {
-        height: 33%;
-        width: 100%;
-    }
+ 
     .overlay-map {
         right: 51%;
         top: 25%;
         width: 40%;
     }
-    .overlay-last
-    {
-        width: 30%;
-    }
-    .work {
-        margin-top: -85px;
-        margin-right: -44%;
-        width: 17%;
-    }
-    .press
-    {
-        width: 81%;
-    }
-    .Listing .press {
-        margin-left: 100px;
-    }
+   
+  
+  
 
 }
+
+@media (min-width:2560px) {
+    .work {
+        margin-left: 636px;
+        width: 12%;
+    }
+    .eye
+    {
+        align-items: unset !important;
+        justify-content: unset !important;
+    }
+    .eye-show {
+        padding-left: 21px;
+    }
+    .map-link
+    {
+        margin-left: 43px;
+    }
+}
+
 
 
 /************fixed Nav in media query*******************/
@@ -1822,6 +2012,7 @@ label
     left: 0;
     position: fixed;
     right: 0;
+  
 }
 .detail-float-menu__item--phone {
     background-image: url(assets/images/phone-white.svg);
