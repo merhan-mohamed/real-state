@@ -1799,7 +1799,7 @@ background-color: white;
         }
         
     }
-    @media (min-width:992px) and (max-width:1200px) {
+    @media (min-width:992px) and (max-width:1300px) {
     .rent
     {
         padding-right:43px;
@@ -1976,6 +1976,25 @@ background-color: white;
     }
 }
 
+@media (min-width:1600px) and (max-width:2000px) {
+    .map-link
+    {
+        margin-left: 46px;
+    }
+    .eye{
+        align-items: unset !important;
+        justify-content: unset !important;
+   }
+   .eye-show
+   {
+    margin-left: 16px !important;
+   }
+   .work
+   {
+    width:24%
+   }
+}
+
 @media (min-width:2000px)  {
    .eye{
         align-items: unset !important;
@@ -1995,6 +2014,7 @@ background-color: white;
    }
     
 }
+
 
 
 
