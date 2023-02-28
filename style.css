@@ -265,7 +265,7 @@ header ul .list .house
 }
 .overlay-last h4
 {
-    margin-top: 3rem;
+    margin-top: 7rem;
 }
 .bigger
 {
@@ -296,8 +296,8 @@ header ul .list .house
 }
 .overlay-map
 {
-    right:13%;
-    top:30%
+    right:33%;
+    top:37%
 }
 .overlay-last
 {
@@ -336,10 +336,7 @@ header ul .list .house
     align-items: baseline;
    
 }
-.work
-{
-    margin-top:-85px
-}
+
 .stars i {
     color: #e6e6e6;
     font-size: 35px;
@@ -454,6 +451,12 @@ header ul .list .house
 .first-number a
 {
     color: var(--color-main);
+}
+
+#lightgallery img
+{
+    height: 100%;
+    width:100%
 }
 
 /*******Listing*************/
