@@ -1942,6 +1942,10 @@ background-color: white;
             margin-left: 2rem!important;
 
         }
+        .first-number, .second, .whatsapp, .viber, .options {
+
+             margin-left: 408px !important;
+        }
     }
     @media (min-width:2000px) and (max-width:2040px) {
       
