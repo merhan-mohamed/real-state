@@ -65,21 +65,25 @@ function SideBar() {
 }
 
 //stop sticky for sidebar
+
 function sticky_relocate() {
+  var rateHeight = $(".ratings");
   var window_top = $(window).scrollTop();
   var footer_top = $("#products").offset().top;
   var div_top = $('#sticky-anchor').offset().top;
   var div_height = $("#calling").height();
-
+  var div_List = $('#Rent').offsetTop
   var padding = 20;  // tweak here or get from margins etc
 
   if (window_top + div_height > footer_top - padding)
       $('#calling').css({top: (window_top + div_height - footer_top + padding) * -1})
-  else if (window_top > div_top) {
+  else if ((window_top > div_top) && ($(window).width()>= 992) ) {
       $('#calling').addClass('stic');
-      $('#calling').css({top: 0})
-  } else {
+      $('#calling').css({top:0});
+      rateHeight.css({height:100})
+    } else {
       $('#calling').removeClass('stic');
+      rateHeight.css({height:975}) 
   }
 }
 
